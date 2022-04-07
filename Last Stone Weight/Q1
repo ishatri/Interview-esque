@@ -1,5 +1,7 @@
 Asked in - google 
 Topics based on - Array, Heap (Priority Queue)
+Level - EASY
+Comments - The question is straight forward with all the instructions provided , the only necessity is to formulate the cpp code for the same.
 
 Question -
 You are given an array of integers stones where stones[i] is the weight of the ith stone.
