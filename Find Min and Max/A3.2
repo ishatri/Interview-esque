@@ -1,0 +1,42 @@
+Second approach includes sorting the array and then printing the first and last element.
+However the sort function takes the time complexity of O(log n) and we need O(n) so not advisable however the approach works.
+
+Topics-  Sort
+
+Code-
+// { Driver Code Starts
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+
+pair<long long, long long> getMinMax(long long a[], int n) ;
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int n;
+        cin >> n;
+        ll a[n];
+        for (int i = 0; i < n; i++) cin >> a[i];
+
+        pair<ll, ll> pp = getMinMax(a, n);
+
+        cout << pp.first << " " << pp.second << endl;
+    }
+    return 0;
+}// } Driver Code Ends
+
+
+pair<long long, long long> getMinMax(long long arr[], int n) {
+     pair<long long, long long> p;
+    //  p.first = *min_element(arr,arr+n);
+    // p.second = *max_element(arr,arr+n);
+    //  return p;
+    sort(arr, arr+n);
+    p.first= arr[0];
+    p.second = arr[n-1];
+    return p;
+    
+
+}
