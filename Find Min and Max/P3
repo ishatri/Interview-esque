@@ -1,1 +1,3 @@
 1. Use the same predefined data type when comparing variables etc , as in declare them properly
+2. Why use INT_MAX and INT_MIN , in case the numbers are non positive then it is helpful otherwise just initialize it with 0 ;
+3. mAKE sure u use a pointer while indicating max and min
