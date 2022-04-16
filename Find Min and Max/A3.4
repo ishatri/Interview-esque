@@ -1,0 +1,51 @@
+Approach 4 is a similar approach to 3 where comparsion operator has been used instead of using max and min with the time complexity of O (N);
+Be careful with the declaration of the varaible in which max and min valuse would be stored
+Code :
+// { Driver Code Starts
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+
+pair<long long, long long> getMinMax(long long a[], int n) ;
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int n;
+        cin >> n;
+        ll a[n];
+        for (int i = 0; i < n; i++) cin >> a[i];
+
+        pair<ll, ll> pp = getMinMax(a, n);
+
+        cout << pp.first << " " << pp.second << endl;
+    }
+    return 0;
+}// } Driver Code Ends
+
+
+pair<long long, long long> getMinMax(long long arr[], int n) {
+     pair<long long, long long> p;
+    //  p.first = *min_element(arr,arr+n);
+    // p.second = *max_element(arr,arr+n);
+    //  return p;
+   long long maxi = INT_MIN;
+   long long mini = arr[0];
+   for(int i =0;i<n;i++)
+   {
+       if(maxi<arr[i])
+       {
+       maxi = arr[i];
+       }
+       else if (mini >arr[i])
+       
+       {mini = arr[i];}
+       
+   }
+   p.first= mini;
+   p.second = maxi;
+    return p;
+    
+
+}
