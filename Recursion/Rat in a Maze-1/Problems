@@ -1,0 +1,7 @@
+1. initialization ofvector 
+vector<int> v1(100, 2) ,means that the vector has 100 elements all initialized to 2
+vector <int> v2{1,2,4} means vector has 3 elements with 1, 2 and 4 as the vales of them
+
+vector<vector<int>> vis(n , vector<int> (n , 0))
+
+2. call by reference
