@@ -10,7 +10,7 @@ class solution {
     
     //(D, L , R, U)
     //downward
-    if(i+1<n && !vis[i][j] && vis[i+1][j]==1)
+    if(i+1<n && !vis[i][j] && arr[i+1][j]==1)
     {
       vis[i][j]=1;
       solve(i+1, j , n , move+ 'D', ans, vis, arr);
@@ -18,7 +18,7 @@ class solution {
     }
     
     //left
-    if(j-1<n && !vis[i][j] && vis[i][j-1]==1)
+    if(j-1<n && !vis[i][j] && arr[i][j-1]==1)
     {
       vis[i][j]=1;
       solve(i, j-1, n, move + 'L', ans, vis, arr);
@@ -26,7 +26,7 @@ class solution {
     }
     
     //right
-    if(j+1>=0 && vis![i][j] && vis[i][j+1]==1)
+    if(j+1>=0 && vis![i][j] && arr[i][j+1]==1)
     {
       vis[i][j]=1;
       solve(i, j+1, n , move+ 'R', ans, vis, arr);
@@ -34,7 +34,7 @@ class solution {
     }
     
     //up
-        if(i-1>=0 && !vis[i][j] && m[i-1][j]==1)
+        if(i-1>=0 && !vis[i][j] && arr[i-1][j]==1)
         {
              vis[i][j]=1;
             solve(i-1,j, ans, m, n , move + 'U', vis);
